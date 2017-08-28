@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  courseId: MyString
+  title: MyString
+  courseNumber: MyString
+  instructor: MyString
+  description: MyString
+  credits: 1
+  location: MyString
+  days: MyString
+  hours: MyString
+
+two:
+  courseId: MyString
+  title: MyString
+  courseNumber: MyString
+  instructor: MyString
+  description: MyString
+  credits: 1
+  location: MyString
+  days: MyString
+  hours: MyString

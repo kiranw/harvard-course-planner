@@ -1,0 +1,22 @@
+<div class="col-md-8" id="left-panel">
+  <%= form_tag courses_index_path, method: :get do %>
+  <%= text_field_tag 'term', params[:term], placeholder: "Enter user's name or surname" %>
+  <%= submit_tag 'Search', :class => 'btn btn-default' %>
+  <% end %>
+
+<ul>
+  <%= render "course" %>
+</ul>
+
+</div>
+
+<div class="col-md-4" id="right-panel">
+  <h1>Main#index</h1>
+  <p>Find me in app/views/main/index.html.erb testest</p>
+
+  <% @courses.each do |c| %>
+  <%= c.title %><br>
+  <% end %>
+</div>
+
+
