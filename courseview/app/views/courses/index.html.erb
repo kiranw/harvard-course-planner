@@ -1,8 +1,12 @@
 <div class="col-md-8" id="left-panel">
-  <%= form_tag courses_index_path, method: :get do %>
-  <%= text_field_tag 'term', params[:term], placeholder: "Enter user's name or surname" %>
-  <%= submit_tag 'Search', :class => 'btn btn-default' %>
-  <% end %>
+  <div class="input-group">
+    <%= form_tag courses_index_path, method: :get do %>
+    <%= text_field_tag 'term', params[:term], placeholder: "Course name/number", :class => 'form-control' %>
+    <span class="input-group-btn">
+      <%= submit_tag 'Search', :class => 'btn btn-default' %>
+    </span>
+    <% end %>
+  </div>
 
 <ul>
   <%= render "course" %>
@@ -11,6 +15,14 @@
 </div>
 
 <div class="col-md-4" id="right-panel">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+
+
   <h1>Main#index</h1>
   <p>Find me in app/views/main/index.html.erb testest</p>
 
