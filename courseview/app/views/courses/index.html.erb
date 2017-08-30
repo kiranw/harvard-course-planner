@@ -1,34 +1,31 @@
+<%= render "navbar" %>
+
+
 <div class="col-md-8" id="left-panel">
-  <div class="input-group">
-    <%= form_tag courses_index_path, method: :get do %>
-    <%= text_field_tag 'term', params[:term], placeholder: "Course name/number", :class => 'form-control' %>
+  <h1>Main#index</h1>
+  <p>Find me in app/views/main/index.html.erb testest</p>
+
+  <ul>
+    <%= render "course" %>
+  </ul>
+
+</div>
+
+
+<div class="col-md-4" id="right-panel">
+  <div class="input-group form-group">
+    <%= form_tag courses_index_path, id: "search-form", method: :get do %>
+    <%= text_field_tag 'term', params[:term], placeholder: "Course name/number", :class => 'form-control', id:'searchbar' %>
     <span class="input-group-btn">
-      <%= submit_tag 'Search', :class => 'btn btn-default' %>
+      <%= submit_tag 'Search', class: 'btn btn-default' %>
     </span>
     <% end %>
   </div>
 
-<ul>
-  <%= render "course" %>
-</ul>
-
-</div>
-
-<div class="col-md-4" id="right-panel">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
-      </span>
-    </div><!-- /input-group -->
-
-
-  <h1>Main#index</h1>
-  <p>Find me in app/views/main/index.html.erb testest</p>
-
   <% @courses.each do |c| %>
   <%= c.title %><br>
   <% end %>
+
 </div>
 
 

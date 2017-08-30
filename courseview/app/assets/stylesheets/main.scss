@@ -4,8 +4,27 @@
 
 #left-panel{
 	background-color:white;
+	padding-top: 30px;
+	padding-bottom: 100%;
 }
 
 #right-panel{
 	background-color:gray;	
+	padding-top: 30px;
+	padding-bottom: 100%;
+}
+
+form {
+	display: inline-table
+}
+
+#searchbar {
+    border-radius: 5px 0px 0px 5px;
+}
+
+@media (min-width: 980px) {
+  body {
+    padding-top: 40px;
+    padding-bottom: 42px;
+  }
 }
